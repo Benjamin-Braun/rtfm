@@ -11,6 +11,33 @@
 			<hr>
 		</header>
 
+		<p>Since Apple announced it's AI ("Apple Intelligence", haha), I am sick of macOS. I can't tell exactly why, but it being, and not being, like Unix at the same time, just was weird. Anyway, Apple trying to add AI is now the cherry on-top. So I don't wanna throw away my MacBook, nor I want to use macOS. Therefore let's install Linux (Arch, btw).</p>
+		
+		<h2>The Battlestation</h2>
+		<img src="img/20240616/1.png">
+		<p>The Battlestation, or Test-Object, for this project is this MacBook Pro (Image above). The basic specs are: 2.4GHz quad-core Intel Core i5; 256GB SSD; 8GB of 2133MHz LPDDR3 RAM; Intel Iris Plus Graphics 655. Apple calls it "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)". The size is not tiny, but still small. It's very thin (the whole thing is as thick as the screen of my old macbook) and the trackpad is actually pretty nice & large. Of course the Butterfly-Keyboard is not very good, nor is the Touchbar. Another big middlefinger is the USB-C (or Thunderbolt) only design, it just sucks to always take dongle's with you. But we'll get to that later. So, overall a decent laptop from Apple.</p>
+
+		<h2>First Try</h2>
+		<p>I began by just trying to install Linux Mint (LMDE) via a USB stick. Although I quickly noticed, that neither the trackpad, nor the keyboard, nor the Touchbar worked. I kidna expected the Touchbar to not work, but Trackpad & Keyboard? I hooked up a Mouse & Keyboard via USB and it actually worked. So apparently there is some special, or proprietary, connection-system-thingy? Anyhow, seeing as I can't use my Laptop outside of my setup, I rendered it unusable. Therefore the first try was a failure.</p>
+		
+		<h2>Why it is not as easy, as it seems</h2>
+		<p>So, I found out about the T2 Chip from Apple. The connection-system-thingy for the Trackpad & Keyboard. Well, actually it's a security chip from Apple for Intel based Macintosh computers. It's a 64-bit ARM chip, that runs bridgeOS. BridgeOS is a Operating System from Apple, mainly developed for the T series chips and it mainly operates the Touchbar. So now, that we know what the T2 Chip is, we also find out what the problem is. Linux normally has no drivers for the T2 Chip, or rather, bridgeOS. But we're lucky, there is something called <a href="https://wiki.t2linux.org/">T2 Linux</a>. So that's what I continued with.</p>
+		
+		<h2>Second Try</h2>
+		<p>Now that I know about the T2 Chip and T2 Linux, I can start solving my problems. Kind of. So, I started by installing LMDE (again). But now, I tried to install the T2 Kernel after installing. So, just copy&paste a few comments, aaaannnd, it, does, not work... Well, it kinda works. By that I mean, the Keyboard works, I guess. But the Trackpad was f#cked. When move my finger up&down, the cursor moves left&right. Left&right scrolls up&down and clicking moves the cursor right. Basically: Unusable. Therefore the second try was also a failure.</p>
+		
+		<h2>Third & Final Try</h2>
+		<p>On my third try, I just downloaded a official Distro from T2 Linux, in this case Arch. Then I went to the Arch Wiki and installed Arch on the MacBook. You know, RTFM, read the f#cking manual. Anyways, the T2 Wiki has you guided through the installation process, everything went well, except a few things. Some stuff, like screen brightness, just would'nt wanna work. I fixed screen brightness eventually, but some other stuff is not really working... Anyhow, I proceeded by installing xorg and i3 as a WM. The Keyboard and Trackpad works as expected. Although I can't really change the Cursor Speed, only DPI (but that's good enough for me). The Touchbar also works fine most of the time. Sometimes the daemon (tiny-dfr) doesn't start, so I need to start it manually via the Terminal. But other than that it works. I can even change the brightness of the Toucbar :)</p>
+		
+		<h2>How usable it is</h2>
+		<p>Like I said, the Touchbar daemon (tiny-dfr) sometimes doesn't startup automatically. That sucks, especially when you're in VIM and forgot, that your ESC Key is on the f#cking Touchbar. Another thing I know isn't working correctly, is Lid-Closing. When I close the lid, the system apparently tries to go to sleep. But when I open it, it "starts up" and then crashes. Then it automatically reboots and crashes again. Then it stay's off, until I manually turn it back on, then everything works as expected. The last middle finger is the high DPI screen. I can scale it in xorg, but it either looks ugly, or is a lower resolution. You can probably fix these problems, but right now, I'm happy it's working mostly fine.</p>
+		
+		<h2>Conclusion</h2>
+		<p>We can see, it works. At least on my machine. I would not recommend it, if you're not into tech, and/or want something that "just works". The system works mostly fine, but it's not as good as macOS (or Windows with BootCamp) and it's very tedious to set up. If you're like me, enjoying the fun of Linux and hacking, do it! But if you're not really into that, stick with macOS.</p>
+
+		<br>
+		<p>Hope y'all have a great day!</p>
+		<p>- Benny</p>
 		<br>
 
 		<footer>

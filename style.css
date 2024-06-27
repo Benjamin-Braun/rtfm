@@ -25,3 +25,7 @@ h1, h2, h3, h4, p, a {
 .post a {
 	font-size: 15pt;
 }
+
+img {
+	width: 50%;
+}

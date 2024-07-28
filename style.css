@@ -5,6 +5,11 @@ html {
 header {
 }
 
+body {
+	width: 50%;
+	margin-left: 25%;
+}
+
 footer {
 	text-align: center;
 	background-color: #101010;

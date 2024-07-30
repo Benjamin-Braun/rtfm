@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>RTFM Blog</title>
-		<link rel="stylesheet" href="style.css">
+		<div id="th"><link rel="stylesheet" href="theme/dark.css"></div>
 	</head>
 	<body>
 		<header>
@@ -47,7 +47,40 @@
 			<p>Copyright &copy; 2024 Benjamin Braun</p>
 			<p>Licensed under MIT Licnese</p>
 			<a href="https://github.com/Benjamin-Braun">GitHub</a> <a href="about.html">About</a>
+			<br><br>
+			<select id="ddlViewBy">
+				<option value="dark.css">Dark (Default)</option>
+				<option value="light.css" selected="selected">Light</option>
+				<option value="-" selected="selected">NoCSS</option>
+				<optgroup label="Dark">
+					<option value="dblue.css">Dark Blue</option>
+				</optgroup>
+				<optgroup label="Light">
+					<option value="blue.css">Blue</option>
+				</optgroup>
+			</select>
+			<button onclick="ct()">Apply</button>
+			<br><br>
 			<div id="fwc" align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=57134&s=1' border='0' alt='Free Website Counter'></a><br / ><small><p>since July 20th 2024</p></small></div>
 		</footer>
 	</body>
+
+	<script>
+		var e = document.getElementById("ddlViewBy");
+		var t = document.getElementById("th");
+
+		if(localStorage.getItem("theme") != null){
+			t.innerHTML = "<link rel=\"stylesheet\" href=\"theme/" + localStorage.getItem("theme") + "\">";
+		}
+		if(sessionStorage.getItem("theme") != null){
+			t.innerHTML = "<link rel=\"stylesheet\" href=\"theme/" + sessionStorage.getItem("theme") + "\">";
+		}
+
+		function ct(){
+			var text = e.value;
+			t.innerHTML = "<link rel=\"stylesheet\" href=\"theme/" + text + "\">";
+			localStorage.setItem("theme", text);
+			sessionStorage.setItem("theme", text);
+		}
+	</script>
 </html>

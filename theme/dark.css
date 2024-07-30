@@ -1,0 +1,40 @@
+html {
+	background-color: #202020;
+}
+
+header {
+}
+
+body {
+	width: 50%;
+	margin-left: 25%;
+}
+
+footer {
+	text-align: center;
+	background-color: #101010;
+	padding: 2%;
+	margin-top: 10%;
+}
+
+h1, h2, h3, h4, p, a {
+	color: #ffffff;
+}
+
+.post h4 {
+	float: right;
+	margin-top: 18px;
+	margin-right: 0px;
+}
+
+.post a {
+	font-size: 15pt;
+}
+
+img {
+	width: 50%;
+}
+
+.fwc {
+	transform: scale(0.2);
+}

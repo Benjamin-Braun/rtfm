@@ -20,6 +20,39 @@
 			<p>Copyright &copy; 2024 Benjamin Braun</p>
 			<p>Licensed under MIT Licnese</p>
 			<a href="https://github.com/Benjamin-Braun">GitHub</a> <a href="../about.html">About</a>
+			<br><br>
+			<select id="ddlViewBy">
+				<option value="dark.css">Dark (Default)</option>
+				<option value="light.css" selected="selected">Light</option>
+				<option value="-" selected="selected">NoCSS</option>
+				<optgroup label="Dark">
+					<option value="dblue.css">Dark Blue</option>
+				</optgroup>
+				<optgroup label="Light">
+					<option value="blue.css">Blue</option>
+				</optgroup>
+			</select>
+			<button onclick="ct()">Apply</button>
 		</footer>
+	</body>
+
+	<script>
+		var e = document.getElementById("ddlViewBy");
+		var t = document.getElementById("th");
+
+		if(localStorage.getItem("theme") != null){
+			t.innerHTML = "<link rel=\"stylesheet\" href=\"../theme/" + localStorage.getItem("theme") + "\">";
+		}
+		if(sessionStorage.getItem("theme") != null){
+			t.innerHTML = "<link rel=\"stylesheet\" href=\"../theme/" + sessionStorage.getItem("theme") + "\">";
+		}
+
+		function ct(){
+			var text = e.value;
+			t.innerHTML = "<link rel=\"stylesheet\" href=\"../theme/" + text + "\">";
+			localStorage.setItem("theme", text);
+			sessionStorage.setItem("theme", text);
+		}
+	</script>
 	</body>
 </html>
